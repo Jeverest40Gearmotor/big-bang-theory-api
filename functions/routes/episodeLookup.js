@@ -11,11 +11,7 @@ const episodeLookup = (req, res) => {
     res.status(200).json({
     success: true,
     code: req.params.code, // code is the episode code, e.g. 1x01 is the first episode of the first season
-    data: bbt._embedded.episodes.filter(episode => episode.season + "x" + episode.number === req.params.code
-                                .replace(req.params.code
-                                .split("x")[1],req.params.code
-                                .split("x")[1]
-                                .replace(/^0/, "")))
+    data: parsed
   })
   } else {
     res.status(400).json({
