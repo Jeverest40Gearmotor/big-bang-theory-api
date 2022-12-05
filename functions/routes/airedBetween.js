@@ -15,7 +15,7 @@ const airedBetween = (req, res) => {
     success: false,
     date1: req.params.date1,
     date2: req.params.date2,
-    message: "Episode code is invalid. Please try again."
+    message: "Not a valid range. Please try again."
   })
   }
 }
