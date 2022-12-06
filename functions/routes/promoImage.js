@@ -10,12 +10,14 @@ const promoImage = (req, res) => {
   if(parsed.length > 0){
     res.status(200).json({
     success: true,
-    data: parsed
+    code: req.params.code,
+    data: parsed[0].image.original
   })
   } else {
     res.status(400).json({
     success: false,
-    message: "Not a valid range. Please try again."
+    code: req.params.code,
+    message: "Episode code is invalid. Please try again."
   })
   }
 }
